@@ -27,6 +27,8 @@ namespace BasketService.Data.Models
             Id = id;
         }
 
-       
+        public Basket()
+        {
+        }
     }
 }

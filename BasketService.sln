@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService", "BasketService\BasketService.csproj", "{CCB2FD46-3FA1-425F-9F9B-4B1C2FB5AF4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Test", "BasketService.Test\BasketService.Test.csproj", "{FE474DA5-CA72-45B9-9103-82E7F1F6F271}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{CCB2FD46-3FA1-425F-9F9B-4B1C2FB5AF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCB2FD46-3FA1-425F-9F9B-4B1C2FB5AF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCB2FD46-3FA1-425F-9F9B-4B1C2FB5AF4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE474DA5-CA72-45B9-9103-82E7F1F6F271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE474DA5-CA72-45B9-9103-82E7F1F6F271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE474DA5-CA72-45B9-9103-82E7F1F6F271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE474DA5-CA72-45B9-9103-82E7F1F6F271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
