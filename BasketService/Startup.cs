@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using StackExchange.Redis;
 
 namespace BasketService
 {
@@ -36,7 +37,7 @@ namespace BasketService
             services.AddStackExchangeRedisCache(options =>
             {
                 options.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
-                options.InstanceName="master";
+                options.InstanceName = "master";
             });
             services.AddAutoMapper(typeof(ModelMappers));
             services.AddScoped<IBasketRepository, BasketRepository>();
@@ -50,15 +51,14 @@ namespace BasketService
         {
             builder.RegisterModule(new MediatorModule());
         }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BasketService v1"));
-            }
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BasketService v1"));
+
             AutofacContainer = app.ApplicationServices.GetAutofacRoot();
             app.UseHttpsRedirection();
 
